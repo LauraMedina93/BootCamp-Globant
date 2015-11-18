@@ -1,0 +1,15 @@
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.alias{
+width:inherit;
+height:inherit;
+background-color: #fdefef;
+}
+.error-txt{
+   color: red;
+}
