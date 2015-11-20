@@ -6,10 +6,27 @@
     -webkit-transform: translate(-50%, -50%);
 }
 .alias{
-width:inherit;
-height:inherit;
-background-color: #fdefef;
+    width:inherit;
+    height:inherit;
+    background-color: #fdefef;
 }
 .error-txt{
-   color: red;
+    color: red;
+}
+.header{
+    position: absolute;
+    top: 150px;
+    left: 43%;    
+}
+.center-sec{
+    position: absolute;
+    left: 32%;
+    top: 40%;
+    width:500px;   
+}
+.center-sec1{
+    position: absolute;
+    left: 32%;
+    top: 25%;
+    width:500px; 
 }
