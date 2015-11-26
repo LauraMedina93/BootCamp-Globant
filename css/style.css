@@ -18,10 +18,9 @@
     top: 150px;
     left: 43%;    
 }
-.header1{
+.audio{
     position: absolute;
-    top: 700px;
-    left: 43%;   
+    text-align: center;  
 }
 .center-sec{
     position: absolute;
@@ -35,7 +34,7 @@
     top: 25%;
     width:500px; 
 }
-.content{
+/*.content{
     position: absolute;
     top:15%;
     left: 65%;
@@ -47,7 +46,7 @@
     left: 5%;
     width: 550px;
     height: 450px;
-}
+}*/
 .body{
  margin: 0;
  background-color: #e7e7e7;

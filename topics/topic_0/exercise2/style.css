@@ -1,0 +1,29 @@
+html{
+    font-size: 14px;
+}
+.header{
+    background: magenta;
+    text-align: center;
+    font-size: 46px;
+}
+.navegation{
+    background: blue;
+    font-size: 12px;
+}
+.sidebar{
+    background: magenta;
+    font-size: 10px;
+    float: right; 
+    width: 130px;
+    
+}
+.footer{
+    background: magenta;
+    text-align: center;
+    font-size: 10px;
+}
+.content{
+    text-align: center; 
+    position: relative;
+    border-top: 1px; 
+}
