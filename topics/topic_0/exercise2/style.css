@@ -15,7 +15,7 @@ html{
     font-size: 10px;
     float: right; 
     width: 130px;
-    
+    padding-right: 50px;
 }
 .footer{
     background: magenta;

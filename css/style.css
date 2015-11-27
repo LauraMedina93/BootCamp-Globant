@@ -6,9 +6,10 @@
     -webkit-transform: translate(-50%, -50%);
 }
 .alias{
-    width:inherit;
-    height:inherit;
+    width:202px;
+    height:30px;
     background-color: #fdefef;
+    text-align: center;
 }
 .error-txt{
     color: red;
@@ -48,6 +49,6 @@
     height: 450px;
 }*/
 .body{
- margin: 0;
+ margin: 0 auto;
  background-color: #e7e7e7;
 }

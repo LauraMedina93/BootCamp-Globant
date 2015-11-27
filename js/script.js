@@ -2,11 +2,12 @@ $(document).ready(function() {
     $("section").fadeIn("6000");
     $(".alias").focus();
     
-     $(".button1").click(function() {
-        alert("Welcome!")
+     $("#name").click(function() {
+        alert("Welcome!");
     });
+    
     //welcome+name
-    $("button").click(function() {
+    /*$("#name").click(function() {
         var value = $(".alias").val();
         $.ajax({
             url: "http://bootcamp.aws.af.cm/welcome/" + value,
@@ -14,26 +15,27 @@ $(document).ready(function() {
             success: function(data) {
                 $("section").html(data.response)
             },
-            error: function(error) {
+            error: function() {
                 $("section").toggleClass("error-txt")
             }
-        });
+        });*/
+    
         //search on spotify
-        $.ajax({
-            url: "https://api.spotify.com/v1/search?q=Rolling+Stones&type=album",
-            type: 'GET',
-            success: function(data) {
-                $("section").html(data.response)
-                console.log(data.albums);
-                for (var i = 0; i < data.albums.items.length; i++) {
-
-                }
-            },
-            error: function(error) {
-                alert(error);
-            }
+        $(".alias").focus();
+        $("#search").click(function(){ 
+        var text = $(".alias").val();  
+        $.get("https://api.spotify.com/v1/search?q="+text+"&type=album",function(data){
+            $(".album").text("");
+            for (var i = 0; i < 100; i++) {
+            $(".album").append("<img src="+data.albums.items[i].images[2].url+" />");   
+            $(".album").append(data.albums.items[i].album_type+" -->");      
+            $(".album").append("Title: "+"<strong>"+data.albums.items[i].name+"</strong>"+"--->");
+            var address = data.albums.items[i].external_urls.spotify;
+            $(".album").append("<a href="+address+">Go to Spotify to listen now!</a><br>")       
+      
+          };
+            });
         });
     });
    
-});
-
+//});
