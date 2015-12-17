@@ -1,0 +1,20 @@
+.weather-panel .temp {
+    font-size: 5.9vw;
+    margin: 0px;
+    line-height: 60px;
+    float: right;
+}
+.weather-panel .supersmall {
+    font-size: 12px;
+    margin-top: 0px;
+}
+.input{
+       text-align: center; 
+    position: relative;
+}
+.wi {
+    padding: 0px;
+}
+.weather-panel .col-sm-6 {
+    text-align: center;
+}
