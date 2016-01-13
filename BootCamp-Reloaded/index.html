@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="weather">
+    <head>
+        <title>BootCamp II</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../BootCamp-Globant/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="ngStorage.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <script src="index.js" type="text/javascript"></script>
+
+    </head>
+    <body ng-controller="myWeather">
+        <h2 class="text-center text-primary">My Wheather</h2>
+
+        <div class="text-center">
+            <input ng-model="cities" class="input-sm" placeholder="City">
+            <input ng-model="provinces" class="input-sm" placeholder="Province">
+            <button ng-click="searchCity()" class="btn-info" >Search!</button><br>
+        </div>
+
+        <div class= "content">
+
+            <div class="repeat" ng-repeat= "weather in data">
+
+                <div class="supr" ng-mouseenter="remove.isShowed = true" ng-mouseleave="remove.isShowed = false">
+                    <div class="delete" ng-click="removeCity(weather)" ng-show="remove.isShowed">
+                        <img src="images/delete.png"></div>
+                    <div class="results">{{weather.city}}, {{weather.country}}<br>
+                        {{weather.date}}<br>{{weather.text}}</div>
+                    <div class="temp">{{weather.temp}}</div>
+                    <div class="unit">°{{weather.tempUnit}}</div>
+                    <div class="image">
+                        <img src="http://l.yimg.com/a/i/us/we/52/{{weather.code}}.gif"></div>
+                    <div class="dates">
+                        <ol>
+                            <div class="pressure">Pressure: {{weather.pressure}} {{weather.presUnit}}</div>
+                            <div class="humidity">Humidity: {{weather.humidity}}%</div>
+                            <div class="wind">Wind: {{weather.wind}} {{weather.windUnit}}</div>
+
+                        </ol>
+                    </div>
+
+                </div>
+            </div>        	  
+        </div>
+
+
+    </body>
+</html>
