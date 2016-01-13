@@ -1,10 +1,6 @@
 app.controller('myWeather', function($scope, $http) {
     $scope.data = [];
-
-    $scope.removeCity = function(weather) {
-        var i = $scope.data.indexOf(weather);
-        $scope.data.splice(i, 1);
-    };
+    
     $scope.searchCity = function() {
         var city = $scope.cities;
         var province = $scope.provinces;
@@ -19,6 +15,10 @@ app.controller('myWeather', function($scope, $http) {
         });
         $scope.cities = "";
         $scope.provinces = "";
+    };
+    $scope.removeCity = function(weather) {
+        var i = $scope.data.indexOf(weather);
+        $scope.data.splice(i, 1);
     };
 });
 
