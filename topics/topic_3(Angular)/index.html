@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="angular">
+    <head>
+        <title>Topic 5 - Angular.JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <link href="../../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="app.js" type="text/javascript"></script>
+
+    </head>
+    <body class="center">
+        <h2 class="text-center"> Movies!</h2>
+        <div class="text-capitalize" ng-controller="mainController">
+            <div ng-repeat="movie in movies">         			  
+                <div ng-show="movie.isEdited">
+                    <input type="text" ng-model="movie.name"/>  <input type="text" ng-model="movie.description"/>
+                    <button ng-click="movie.isEdited = false">Accept</button>
+                </div>
+
+                <div ng-hide="movie.isEdited">
+                    <ul class="table-bordered table-responsive">
+                        <b>{{movie.name}}</b>
+                        <div ng-hide="description.isShow">
+                            <button ng-click="description.isShow = true">Show Description</button>
+
+                        </div>
+                        <div ng-show="description.isShow">  {{movie.description}}     
+                            <button ng-click="description.isShow = false">Hide Description</button>
+                        </div>
+
+                        <button ng-click="movie.isEdited = true">Edit this Movie</button>
+                        <button ng-click="removeMovie(movie)">Remove this Movie</button>
+                    </ul> 
+
+                </div>
+            </div>
+            <div class="text-center">
+                <input class="input-sm" type="text" ng-model="movieBox" placeholder="Write the film's name ">  
+                <input class="input-sm" type="text" ng-model="descriptionBox" placeholder="Write description">
+                <button class="btn-primary" type="submit" ng-click="addMovie()">Add this film!</button>
+            </div>
+        </div>
+    </body>
+</html>
