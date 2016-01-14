@@ -16,7 +16,7 @@ app.controller('myWeather', function($scope, $http, $localStorage) {
                 tempUnit: resp.units.temperature, pressure: resp.atmosphere.pressure,
                 presUnit: resp.units.pressure, humidity: resp.atmosphere.humidity,
                 wind: resp.wind.speed, windUnit: resp.units.speed});
-            $scope.weathers = $localStorage.data;
+            $scope.data = $localStorage.data;
         });
         //save data in this variables
         $scope.cities = "";
