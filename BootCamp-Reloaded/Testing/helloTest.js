@@ -15,7 +15,7 @@ describe("probando controlador hello", function()
  
         it("debe estar definida una variable hello", function()
         {
-            expect(scope.hello).toBeDefined();
+            expect(scope.hello).toBe('Hello');
         });
     });
  });
