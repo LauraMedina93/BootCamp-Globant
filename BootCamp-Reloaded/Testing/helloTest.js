@@ -1,6 +1,7 @@
+'use strict';
 describe("probando controlador hello", function()
 {
-    beforeEach(module('app'));
+    beforeEach(module("app"));
  
     describe("helloCtrl", function()
     {

@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Sun Jan 17 2016 18:08:33 GMT-0300 (Hora estándar de Argentina)
+// Generated on Wed Jan 20 2016 12:29:12 GMT-0300 (Hora estándar de Argentina)
 
 module.exports = function(config) {
   config.set({
@@ -16,7 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
         'node_modules/angular/angular.js',
-        'node_modules/angular-mocks.js',
+        'node_modules/angular-mocks/angular-mocks.js',
         'Testing/helloTest.js',
         'Testing/helloWorld.js'
     ],
