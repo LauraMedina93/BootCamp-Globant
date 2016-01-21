@@ -17,8 +17,10 @@ module.exports = function(config) {
     files: [
         'node_modules/angular/angular.js',
         'node_modules/angular-mocks/angular-mocks.js',
-        'Testing/helloTest.js',
-        'Testing/helloWorld.js'
+        'ngStorage.min.js',
+        'Test/app-test.js',
+        'app.js',
+        'index.js'
     ],
 
 
