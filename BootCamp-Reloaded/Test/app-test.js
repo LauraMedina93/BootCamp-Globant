@@ -1,25 +1,35 @@
-
 describe("Test controller myWeather", function()
 {
-    beforeEach(module("weather"));
+    beforeEach(module('weather'));
+    var $controller; 
  
-    describe("myWeather", function()
-    {
-        var scope, ctrl;
- 
-        beforeEach(inject(function($rootScope, $controller)
+        beforeEach(inject(function(_$controller_)
         {
-            scope = $rootScope.$new();
-            ctrl = $controller("myWeather", {$scope:scope});
+            $controller = _$controller_;
         }));
- 
-        it("debe estar definida la variable data", function()
+ describe ('$scope', function(){
+     it("data must return an array", function()
         {
-            expect(scope.data).toBeDefined(); 
+            var $scope = {};
+            var controller = $controller('myWeather', {$scope : $scope});
+            $scope.searchCity();
+            expect($scope.data).toEqual([]); 
         });
-         it("debe estar definida la variable cities", function()
+        it("cities must be defined and return a string", function()
         {
-            expect(scope.cities).toBeDefined(); 
+            var $scope = {};
+            var controller = $controller('myWeather', {$scope : $scope});
+            $scope.searchCity();
+            expect($scope.cities).toBeDefined();
+            expect($scope.cities).toEqual('');
         });
-    });
+        it("provinces must be defined and return a string", function()
+        {
+            var $scope = {};
+            var controller = $controller('myWeather', {$scope : $scope});
+            $scope.searchCity();
+            expect($scope.provinces).toBeDefined();
+            expect($scope.provinces).toEqual('');
+        });
  });
+    });
